@@ -1,5 +1,22 @@
 package main
 
+/*
+
+Enunciado: Dado um array de inteiros nums onde todos os elementos aparecem exatamente duas vezes,
+exceto por um elemento que aparece apenas uma vez. Encontre e retorne esse elemento solitário.
+
+
+
+Exemplo 1: * Input: nums = [2, 2, 1]
+
+Output: 1
+
+Exemplo 2: * Input: nums = [4, 1, 2, 1, 2]
+
+Output: 4
+
+*/
+
 func singleNumber(nums []int) int {
 	hs := make(map[int]struct{}, (len(nums)/2)+1)
 
