@@ -17,6 +17,7 @@ func twoSumHashMap(nums []int, target int) []int {
 	hm := make(map[int]int, len(nums))
 	for i, num := range nums {
 		compl = target - num
+
 		if _, ok := hm[compl]; ok {
 			return []int{hm[compl], i}
 		}

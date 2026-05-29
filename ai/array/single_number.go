@@ -5,13 +5,11 @@ package main
 Enunciado: Dado um array de inteiros nums onde todos os elementos aparecem exatamente duas vezes,
 exceto por um elemento que aparece apenas uma vez. Encontre e retorne esse elemento solitário.
 
-
-
-Exemplo 1: * Input: nums = [2, 2, 1]
+Exemplo 1: Input: nums = [2, 2, 1]
 
 Output: 1
 
-Exemplo 2: * Input: nums = [4, 1, 2, 1, 2]
+Exemplo 2: Input: nums = [4, 1, 2, 1, 2]
 
 Output: 4
 
@@ -43,4 +41,20 @@ func singleNumberXOR(nums []int) int {
 	}
 
 	return result
+}
+
+func singleNumber2(nums []int) int {
+	set := make(map[int]int, len(nums))
+
+	for _, num := range nums {
+		set[num]++
+	}
+
+	for _, v := range nums {
+		if set[v] == 1 {
+			return v
+		}
+	}
+
+	return -1
 }
